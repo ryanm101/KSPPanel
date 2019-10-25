@@ -1,0 +1,953 @@
+EESchema Schematic File Version 4
+LIBS:kspPanel-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Teensey:Teensy3.5 U1
+U 1 1 5DAFFFA4
+P 9100 3200
+F 0 "U1" H 9100 5727 60  0000 C CNN
+F 1 "Teensy3.5" H 9100 5621 60  0000 C CNN
+F 2 "Teensey:Teensy35_36" H 9000 5450 60  0000 C CNN
+F 3 "" H 9100 5650 60  0000 C CNN
+F 4 "https://www.pjrc.com/teensy/pinout.html" H 9100 5523 50  0000 C CNN "Pinouts"
+	1    9100 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 5DAFF6F7
+P 1100 1400
+F 0 "#PWR0101" H 1100 1250 50  0001 C CNN
+F 1 "+5V" H 1115 1573 50  0000 C CNN
+F 2 "" H 1100 1400 50  0001 C CNN
+F 3 "" H 1100 1400 50  0001 C CNN
+	1    1100 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5DAFE255
+P 7950 1050
+F 0 "#PWR0102" H 7950 800 50  0001 C CNN
+F 1 "GND" H 7955 877 50  0000 C CNN
+F 2 "" H 7950 1050 50  0001 C CNN
+F 3 "" H 7950 1050 50  0001 C CNN
+	1    7950 1050
+	0    1    1    0   
+$EndComp
+Text Label 7950 2450 2    50   ~ 0
+U1_3.3v
+Text Label 700  1000 1    50   ~ 0
+U1_3.3v
+Text Label 1700 1400 0    50   ~ 0
+5v_PWR
+$Comp
+L Relay:TE_PCH-1xxx2M K1
+U 1 1 5DB174F2
+P 1400 1200
+F 0 "K1" H 1730 1246 50  0000 L CNN
+F 1 "TE_PCH-1xxx2M" H 1730 1155 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPST_TE_PCH-1xxx2M" H 1750 1150 50  0001 L CNN
+F 3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FPCH_series_relay_data_sheet_E%7F1215%7Fpdf%7FEnglish%7FENG_DS_PCH_series_relay_data_sheet_E_1215.pdf%7F9-1440003-0" H 2500 900 50  0001 C CNN
+	1    1400 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5DB260BA
+P 1700 1000
+F 0 "#PWR0103" H 1700 750 50  0001 C CNN
+F 1 "GND" V 1705 872 50  0000 R CNN
+F 2 "" H 1700 1000 50  0001 C CNN
+F 3 "" H 1700 1000 50  0001 C CNN
+	1    1700 1000
+	0    -1   -1   0   
+$EndComp
+Text Label 7950 2550 2    50   ~ 0
+3.3v_PWR
+Text Label 7950 2650 2    50   ~ 0
+SAS_P1
+Text Label 7950 2750 2    50   ~ 0
+SAS_P2
+Text Label 7950 2850 2    50   ~ 0
+SAS_P4
+Text Label 7950 2950 2    50   ~ 0
+SAS_P8
+Text Label 7950 3050 2    50   ~ 0
+RCS_TOGGLE
+$Comp
+L Switch:SW_Push SW5
+U 1 1 5DB45C9E
+P 3350 6200
+F 0 "SW5" H 3350 6485 50  0000 C CNN
+F 1 "SW_Push" H 3350 6394 50  0000 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 3350 6400 50  0001 C CNN
+F 3 "~" H 3350 6400 50  0001 C CNN
+	1    3350 6200
+	1    0    0    -1  
+$EndComp
+Text Label 3150 6200 2    50   ~ 0
+3.3v_PWR
+Text Label 3750 6200 0    50   ~ 0
+ABORT
+$Comp
+L Switch:SW_Push SW9
+U 1 1 5DB4ACCB
+P 4950 3150
+F 0 "SW9" H 4950 3435 50  0000 C CNN
+F 1 "SW_Push" H 4950 3344 50  0000 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 4950 3350 50  0001 C CNN
+F 3 "~" H 4950 3350 50  0001 C CNN
+	1    4950 3150
+	1    0    0    -1  
+$EndComp
+Text Label 5350 3150 0    50   ~ 0
+SAS_SELECT
+Text Label 3750 5500 0    50   ~ 0
+BRAKES_TOGGLE
+$Comp
+L Switch:SW_SPST SW4
+U 1 1 5DB499A1
+P 3350 5500
+F 0 "SW4" V 3304 5598 50  0000 L CNN
+F 1 "SW_SPST" V 3395 5598 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 3350 5500 50  0001 C CNN
+F 3 "~" H 3350 5500 50  0001 C CNN
+	1    3350 5500
+	1    0    0    -1  
+$EndComp
+Text Label 3750 4700 0    50   ~ 0
+LIGHTS_TOGGLE
+$Comp
+L Switch:SW_SPST SW8
+U 1 1 5DB48EF3
+P 3350 4700
+F 0 "SW8" V 3304 4798 50  0000 L CNN
+F 1 "SW_SPST" V 3395 4798 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 3350 4700 50  0001 C CNN
+F 3 "~" H 3350 4700 50  0001 C CNN
+	1    3350 4700
+	1    0    0    -1  
+$EndComp
+Text Label 3750 3900 0    50   ~ 0
+GEAR_TOGGLE
+$Comp
+L Switch:SW_SPST SW7
+U 1 1 5DB48C3A
+P 3350 3900
+F 0 "SW7" V 3304 3998 50  0000 L CNN
+F 1 "SW_SPST" V 3395 3998 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 3350 3900 50  0001 C CNN
+F 3 "~" H 3350 3900 50  0001 C CNN
+	1    3350 3900
+	1    0    0    -1  
+$EndComp
+Text Label 3750 3100 0    50   ~ 0
+RCS_TOGGLE
+$Comp
+L Switch:SW_SPST SW3
+U 1 1 5DB3ED4C
+P 3350 3100
+F 0 "SW3" V 3304 3198 50  0000 L CNN
+F 1 "SW_SPST" V 3395 3198 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 3350 3100 50  0001 C CNN
+F 3 "~" H 3350 3100 50  0001 C CNN
+	1    3350 3100
+	1    0    0    -1  
+$EndComp
+Text Label 2550 3100 2    50   ~ 0
+5v_PWR
+Text Label 2550 3900 2    50   ~ 0
+5v_PWR
+Text Label 2550 4700 2    50   ~ 0
+5v_PWR
+Text Label 2550 5500 2    50   ~ 0
+5v_PWR
+Text Label 2550 1050 2    50   ~ 0
+5v_PWR
+Text Label 7950 4150 2    50   ~ 0
+SAS_SELECT
+Text Label 7950 3150 2    50   ~ 0
+ABORT
+Text Label 7950 2250 2    50   ~ 0
+SPI_MOSI0
+Text Label 7950 2350 2    50   ~ 0
+SPI_MISO0
+Text Label 7950 4950 2    50   ~ 0
+SPI_SCK0
+Text Label 7950 2150 2    50   ~ 0
+SPI_SS0
+$Comp
+L Device:LED D?
+U 1 1 5DB62E20
+P 3000 1050
+F 0 "D?" H 2993 795 50  0000 C CNN
+F 1 "LED" H 2993 886 50  0000 C CNN
+F 2 "" H 3000 1050 50  0001 C CNN
+F 3 "~" H 3000 1050 50  0001 C CNN
+	1    3000 1050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DB63C3A
+P 2700 1050
+F 0 "R?" V 2493 1050 50  0000 C CNN
+F 1 "100" V 2584 1050 50  0000 C CNN
+F 2 "" V 2630 1050 50  0001 C CNN
+F 3 "~" H 2700 1050 50  0001 C CNN
+	1    2700 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DB67D77
+P 3000 3100
+F 0 "D?" H 2993 2845 50  0000 C CNN
+F 1 "LED" H 2993 2936 50  0000 C CNN
+F 2 "" H 3000 3100 50  0001 C CNN
+F 3 "~" H 3000 3100 50  0001 C CNN
+	1    3000 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DB67D7D
+P 2700 3100
+F 0 "R?" V 2493 3100 50  0000 C CNN
+F 1 "100" V 2584 3100 50  0000 C CNN
+F 2 "" V 2630 3100 50  0001 C CNN
+F 3 "~" H 2700 3100 50  0001 C CNN
+	1    2700 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DB688A6
+P 3000 3900
+F 0 "D?" H 2993 3645 50  0000 C CNN
+F 1 "LED" H 2993 3736 50  0000 C CNN
+F 2 "" H 3000 3900 50  0001 C CNN
+F 3 "~" H 3000 3900 50  0001 C CNN
+	1    3000 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DB688AC
+P 2700 3900
+F 0 "R?" V 2493 3900 50  0000 C CNN
+F 1 "100" V 2584 3900 50  0000 C CNN
+F 2 "" V 2630 3900 50  0001 C CNN
+F 3 "~" H 2700 3900 50  0001 C CNN
+	1    2700 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DB68E76
+P 3000 4700
+F 0 "D?" H 2993 4445 50  0000 C CNN
+F 1 "LED" H 2993 4536 50  0000 C CNN
+F 2 "" H 3000 4700 50  0001 C CNN
+F 3 "~" H 3000 4700 50  0001 C CNN
+	1    3000 4700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DB68E7C
+P 2700 4700
+F 0 "R?" V 2493 4700 50  0000 C CNN
+F 1 "100" V 2584 4700 50  0000 C CNN
+F 2 "" V 2630 4700 50  0001 C CNN
+F 3 "~" H 2700 4700 50  0001 C CNN
+	1    2700 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DB6CBA4
+P 3000 5500
+F 0 "D?" H 2993 5245 50  0000 C CNN
+F 1 "LED" H 2993 5336 50  0000 C CNN
+F 2 "" H 3000 5500 50  0001 C CNN
+F 3 "~" H 3000 5500 50  0001 C CNN
+	1    3000 5500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DB6CBAA
+P 2700 5500
+F 0 "R?" V 2493 5500 50  0000 C CNN
+F 1 "100" V 2584 5500 50  0000 C CNN
+F 2 "" V 2630 5500 50  0001 C CNN
+F 3 "~" H 2700 5500 50  0001 C CNN
+	1    2700 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DB70745
+P 3750 1350
+F 0 "#PWR?" H 3750 1100 50  0001 C CNN
+F 1 "GND" H 3755 1177 50  0000 C CNN
+F 2 "" H 3750 1350 50  0001 C CNN
+F 3 "" H 3750 1350 50  0001 C CNN
+	1    3750 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DB717DB
+P 3750 1200
+F 0 "R?" H 3680 1154 50  0000 R CNN
+F 1 "4.7K" H 3680 1245 50  0000 R CNN
+F 2 "" V 3680 1200 50  0001 C CNN
+F 3 "~" H 3750 1200 50  0001 C CNN
+	1    3750 1200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3550 1050 3750 1050
+$Comp
+L power:GND #PWR?
+U 1 1 5DB76235
+P 3750 3400
+F 0 "#PWR?" H 3750 3150 50  0001 C CNN
+F 1 "GND" H 3755 3227 50  0000 C CNN
+F 2 "" H 3750 3400 50  0001 C CNN
+F 3 "" H 3750 3400 50  0001 C CNN
+	1    3750 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DB7623B
+P 3750 3250
+F 0 "R?" H 3680 3204 50  0000 R CNN
+F 1 "4.7K" H 3680 3295 50  0000 R CNN
+F 2 "" V 3680 3250 50  0001 C CNN
+F 3 "~" H 3750 3250 50  0001 C CNN
+	1    3750 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DB762A3
+P 3750 4200
+F 0 "#PWR?" H 3750 3950 50  0001 C CNN
+F 1 "GND" H 3755 4027 50  0000 C CNN
+F 2 "" H 3750 4200 50  0001 C CNN
+F 3 "" H 3750 4200 50  0001 C CNN
+	1    3750 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DB762A9
+P 3750 4050
+F 0 "R?" H 3680 4004 50  0000 R CNN
+F 1 "4.7K" H 3680 4095 50  0000 R CNN
+F 2 "" V 3680 4050 50  0001 C CNN
+F 3 "~" H 3750 4050 50  0001 C CNN
+	1    3750 4050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DB76311
+P 3750 5000
+F 0 "#PWR?" H 3750 4750 50  0001 C CNN
+F 1 "GND" H 3755 4827 50  0000 C CNN
+F 2 "" H 3750 5000 50  0001 C CNN
+F 3 "" H 3750 5000 50  0001 C CNN
+	1    3750 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DB76317
+P 3750 4850
+F 0 "R?" H 3680 4804 50  0000 R CNN
+F 1 "4.7K" H 3680 4895 50  0000 R CNN
+F 2 "" V 3680 4850 50  0001 C CNN
+F 3 "~" H 3750 4850 50  0001 C CNN
+	1    3750 4850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DB7637F
+P 3750 5800
+F 0 "#PWR?" H 3750 5550 50  0001 C CNN
+F 1 "GND" H 3755 5627 50  0000 C CNN
+F 2 "" H 3750 5800 50  0001 C CNN
+F 3 "" H 3750 5800 50  0001 C CNN
+	1    3750 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DB76385
+P 3750 5650
+F 0 "R?" V 3543 5650 50  0000 C CNN
+F 1 "4.7K" V 3634 5650 50  0000 C CNN
+F 2 "" V 3680 5650 50  0001 C CNN
+F 3 "~" H 3750 5650 50  0001 C CNN
+	1    3750 5650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3550 3100 3750 3100
+Wire Wire Line
+	3550 3900 3750 3900
+Wire Wire Line
+	3550 4700 3750 4700
+Wire Wire Line
+	3550 5500 3750 5500
+$Comp
+L power:GND #PWR?
+U 1 1 5DB9EC1C
+P 3750 6500
+F 0 "#PWR?" H 3750 6250 50  0001 C CNN
+F 1 "GND" H 3755 6327 50  0000 C CNN
+F 2 "" H 3750 6500 50  0001 C CNN
+F 3 "" H 3750 6500 50  0001 C CNN
+	1    3750 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DB9EC22
+P 3750 6350
+F 0 "R?" V 3543 6350 50  0000 C CNN
+F 1 "4.7K" V 3634 6350 50  0000 C CNN
+F 2 "" V 3680 6350 50  0001 C CNN
+F 3 "~" H 3750 6350 50  0001 C CNN
+	1    3750 6350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3550 6200 3750 6200
+$Comp
+L power:GND #PWR?
+U 1 1 5DBA5773
+P 5350 3450
+F 0 "#PWR?" H 5350 3200 50  0001 C CNN
+F 1 "GND" H 5355 3277 50  0000 C CNN
+F 2 "" H 5350 3450 50  0001 C CNN
+F 3 "" H 5350 3450 50  0001 C CNN
+	1    5350 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DBA5779
+P 5350 3300
+F 0 "R?" H 5280 3254 50  0000 R CNN
+F 1 "4.7K" H 5280 3345 50  0000 R CNN
+F 2 "" V 5280 3300 50  0001 C CNN
+F 3 "~" H 5350 3300 50  0001 C CNN
+	1    5350 3300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5150 3150 5350 3150
+Text Label 4750 3150 2    50   ~ 0
+5v_PWR
+$Comp
+L Device:LED D?
+U 1 1 5DBC128F
+P 6600 3950
+F 0 "D?" H 6593 3695 50  0000 C CNN
+F 1 "LED" H 6593 3786 50  0000 C CNN
+F 2 "" H 6600 3950 50  0001 C CNN
+F 3 "~" H 6600 3950 50  0001 C CNN
+	1    6600 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DBC1295
+P 6300 3950
+F 0 "R?" V 6093 3950 50  0000 C CNN
+F 1 "100" V 6184 3950 50  0000 C CNN
+F 2 "" V 6230 3950 50  0001 C CNN
+F 3 "~" H 6300 3950 50  0001 C CNN
+	1    6300 3950
+	0    1    1    0   
+$EndComp
+Text Label 6150 4750 2    50   ~ 0
+ProGrade_LED
+Text Label 6150 5150 2    50   ~ 0
+RetroGrade_LED
+Text Label 6150 7150 2    50   ~ 0
+Normal_LED
+Text Label 6150 7550 2    50   ~ 0
+Anti-Normal_LED
+Text Label 6150 6350 2    50   ~ 0
+Radial_LED
+Text Label 6150 6750 2    50   ~ 0
+Anti-Radial_LED
+Text Label 6150 5550 2    50   ~ 0
+Target_LED
+Text Label 6150 4350 2    50   ~ 0
+Maneuver_LED
+Text Label 6150 3950 2    50   ~ 0
+StabilityAssist_LED
+Text Label 6150 5950 2    50   ~ 0
+Anti-Target_LED
+$Comp
+L power:GND #PWR?
+U 1 1 5DBD145D
+P 6750 3950
+F 0 "#PWR?" H 6750 3700 50  0001 C CNN
+F 1 "GND" H 6755 3777 50  0000 C CNN
+F 2 "" H 6750 3950 50  0001 C CNN
+F 3 "" H 6750 3950 50  0001 C CNN
+	1    6750 3950
+	1    0    0    -1  
+$EndComp
+Text Label 1250 3750 0    50   ~ 0
+5v_PWR
+$Comp
+L power:GND #PWR?
+U 1 1 5DB61335
+P 1250 3650
+F 0 "#PWR?" H 1250 3400 50  0001 C CNN
+F 1 "GND" V 1255 3522 50  0000 R CNN
+F 2 "" H 1250 3650 50  0001 C CNN
+F 3 "" H 1250 3650 50  0001 C CNN
+	1    1250 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x06_Male J1
+U 1 1 5DB5F520
+P 1050 3450
+F 0 "J1" H 1158 3831 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 1158 3740 50  0000 C CNN
+F 2 "" H 1050 3450 50  0001 C CNN
+F 3 "~" H 1050 3450 50  0001 C CNN
+	1    1050 3450
+	1    0    0    -1  
+$EndComp
+Text Label 1250 3550 0    50   ~ 0
+SPI_SCK0
+Text Label 1250 3450 0    50   ~ 0
+SPI_SS0
+Text Label 1250 3250 0    50   ~ 0
+SPI_MISO0
+Text Label 1250 3350 0    50   ~ 0
+SPI_MOSI0
+$Comp
+L Device:LED D?
+U 1 1 5DBD7F98
+P 6600 4350
+F 0 "D?" H 6593 4095 50  0000 C CNN
+F 1 "LED" H 6593 4186 50  0000 C CNN
+F 2 "" H 6600 4350 50  0001 C CNN
+F 3 "~" H 6600 4350 50  0001 C CNN
+	1    6600 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DBD7F9E
+P 6300 4350
+F 0 "R?" V 6093 4350 50  0000 C CNN
+F 1 "100" V 6184 4350 50  0000 C CNN
+F 2 "" V 6230 4350 50  0001 C CNN
+F 3 "~" H 6300 4350 50  0001 C CNN
+	1    6300 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DBD7FA4
+P 6750 4350
+F 0 "#PWR?" H 6750 4100 50  0001 C CNN
+F 1 "GND" H 6755 4177 50  0000 C CNN
+F 2 "" H 6750 4350 50  0001 C CNN
+F 3 "" H 6750 4350 50  0001 C CNN
+	1    6750 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DBD8FE7
+P 6600 4750
+F 0 "D?" H 6593 4495 50  0000 C CNN
+F 1 "LED" H 6593 4586 50  0000 C CNN
+F 2 "" H 6600 4750 50  0001 C CNN
+F 3 "~" H 6600 4750 50  0001 C CNN
+	1    6600 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DBD8FED
+P 6300 4750
+F 0 "R?" V 6093 4750 50  0000 C CNN
+F 1 "100" V 6184 4750 50  0000 C CNN
+F 2 "" V 6230 4750 50  0001 C CNN
+F 3 "~" H 6300 4750 50  0001 C CNN
+	1    6300 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DBD8FF3
+P 6750 4750
+F 0 "#PWR?" H 6750 4500 50  0001 C CNN
+F 1 "GND" H 6755 4577 50  0000 C CNN
+F 2 "" H 6750 4750 50  0001 C CNN
+F 3 "" H 6750 4750 50  0001 C CNN
+	1    6750 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DBD9FF7
+P 6600 5150
+F 0 "D?" H 6593 4895 50  0000 C CNN
+F 1 "LED" H 6593 4986 50  0000 C CNN
+F 2 "" H 6600 5150 50  0001 C CNN
+F 3 "~" H 6600 5150 50  0001 C CNN
+	1    6600 5150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DBD9FFD
+P 6300 5150
+F 0 "R?" V 6093 5150 50  0000 C CNN
+F 1 "100" V 6184 5150 50  0000 C CNN
+F 2 "" V 6230 5150 50  0001 C CNN
+F 3 "~" H 6300 5150 50  0001 C CNN
+	1    6300 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DBDA003
+P 6750 5150
+F 0 "#PWR?" H 6750 4900 50  0001 C CNN
+F 1 "GND" H 6755 4977 50  0000 C CNN
+F 2 "" H 6750 5150 50  0001 C CNN
+F 3 "" H 6750 5150 50  0001 C CNN
+	1    6750 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DBDBE5F
+P 6600 5550
+F 0 "D?" H 6593 5295 50  0000 C CNN
+F 1 "LED" H 6593 5386 50  0000 C CNN
+F 2 "" H 6600 5550 50  0001 C CNN
+F 3 "~" H 6600 5550 50  0001 C CNN
+	1    6600 5550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DBDBE65
+P 6300 5550
+F 0 "R?" V 6093 5550 50  0000 C CNN
+F 1 "100" V 6184 5550 50  0000 C CNN
+F 2 "" V 6230 5550 50  0001 C CNN
+F 3 "~" H 6300 5550 50  0001 C CNN
+	1    6300 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DBDBE6B
+P 6750 5550
+F 0 "#PWR?" H 6750 5300 50  0001 C CNN
+F 1 "GND" H 6755 5377 50  0000 C CNN
+F 2 "" H 6750 5550 50  0001 C CNN
+F 3 "" H 6750 5550 50  0001 C CNN
+	1    6750 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DBDCA7F
+P 6600 5950
+F 0 "D?" H 6593 5695 50  0000 C CNN
+F 1 "LED" H 6593 5786 50  0000 C CNN
+F 2 "" H 6600 5950 50  0001 C CNN
+F 3 "~" H 6600 5950 50  0001 C CNN
+	1    6600 5950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DBDCA85
+P 6300 5950
+F 0 "R?" V 6093 5950 50  0000 C CNN
+F 1 "100" V 6184 5950 50  0000 C CNN
+F 2 "" V 6230 5950 50  0001 C CNN
+F 3 "~" H 6300 5950 50  0001 C CNN
+	1    6300 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DBDCA8B
+P 6750 5950
+F 0 "#PWR?" H 6750 5700 50  0001 C CNN
+F 1 "GND" H 6755 5777 50  0000 C CNN
+F 2 "" H 6750 5950 50  0001 C CNN
+F 3 "" H 6750 5950 50  0001 C CNN
+	1    6750 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DBDE32C
+P 6600 6350
+F 0 "D?" H 6593 6095 50  0000 C CNN
+F 1 "LED" H 6593 6186 50  0000 C CNN
+F 2 "" H 6600 6350 50  0001 C CNN
+F 3 "~" H 6600 6350 50  0001 C CNN
+	1    6600 6350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DBDE332
+P 6300 6350
+F 0 "R?" V 6093 6350 50  0000 C CNN
+F 1 "100" V 6184 6350 50  0000 C CNN
+F 2 "" V 6230 6350 50  0001 C CNN
+F 3 "~" H 6300 6350 50  0001 C CNN
+	1    6300 6350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DBDE338
+P 6750 6350
+F 0 "#PWR?" H 6750 6100 50  0001 C CNN
+F 1 "GND" H 6755 6177 50  0000 C CNN
+F 2 "" H 6750 6350 50  0001 C CNN
+F 3 "" H 6750 6350 50  0001 C CNN
+	1    6750 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DBE336E
+P 6600 6750
+F 0 "D?" H 6593 6495 50  0000 C CNN
+F 1 "LED" H 6593 6586 50  0000 C CNN
+F 2 "" H 6600 6750 50  0001 C CNN
+F 3 "~" H 6600 6750 50  0001 C CNN
+	1    6600 6750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DBE3374
+P 6300 6750
+F 0 "R?" V 6093 6750 50  0000 C CNN
+F 1 "100" V 6184 6750 50  0000 C CNN
+F 2 "" V 6230 6750 50  0001 C CNN
+F 3 "~" H 6300 6750 50  0001 C CNN
+	1    6300 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DBE337A
+P 6750 6750
+F 0 "#PWR?" H 6750 6500 50  0001 C CNN
+F 1 "GND" H 6755 6577 50  0000 C CNN
+F 2 "" H 6750 6750 50  0001 C CNN
+F 3 "" H 6750 6750 50  0001 C CNN
+	1    6750 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DBE4108
+P 6600 7150
+F 0 "D?" H 6593 6895 50  0000 C CNN
+F 1 "LED" H 6593 6986 50  0000 C CNN
+F 2 "" H 6600 7150 50  0001 C CNN
+F 3 "~" H 6600 7150 50  0001 C CNN
+	1    6600 7150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DBE410E
+P 6300 7150
+F 0 "R?" V 6093 7150 50  0000 C CNN
+F 1 "100" V 6184 7150 50  0000 C CNN
+F 2 "" V 6230 7150 50  0001 C CNN
+F 3 "~" H 6300 7150 50  0001 C CNN
+	1    6300 7150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DBE4114
+P 6750 7150
+F 0 "#PWR?" H 6750 6900 50  0001 C CNN
+F 1 "GND" H 6755 6977 50  0000 C CNN
+F 2 "" H 6750 7150 50  0001 C CNN
+F 3 "" H 6750 7150 50  0001 C CNN
+	1    6750 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DBE5508
+P 6600 7550
+F 0 "D?" H 6593 7295 50  0000 C CNN
+F 1 "LED" H 6593 7386 50  0000 C CNN
+F 2 "" H 6600 7550 50  0001 C CNN
+F 3 "~" H 6600 7550 50  0001 C CNN
+	1    6600 7550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DBE550E
+P 6300 7550
+F 0 "R?" V 6093 7550 50  0000 C CNN
+F 1 "100" V 6184 7550 50  0000 C CNN
+F 2 "" V 6230 7550 50  0001 C CNN
+F 3 "~" H 6300 7550 50  0001 C CNN
+	1    6300 7550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DBE5514
+P 6750 7550
+F 0 "#PWR?" H 6750 7300 50  0001 C CNN
+F 1 "GND" H 6755 7377 50  0000 C CNN
+F 2 "" H 6750 7550 50  0001 C CNN
+F 3 "" H 6750 7550 50  0001 C CNN
+	1    6750 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:CD74HC4067M U?
+U 1 1 5DBF66E1
+P 6250 1750
+F 0 "U?" H 6250 2931 50  0000 C CNN
+F 1 "CD74HC4067M" H 6250 2840 50  0000 C CNN
+F 2 "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm" H 7150 750 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/cd74hc4067.pdf" H 5900 2600 50  0001 C CNN
+	1    6250 1750
+	1    0    0    -1  
+$EndComp
+Text Label 5750 1950 2    50   ~ 0
+SAS_P1
+Text Label 6650 750  0    50   ~ 0
+5v_PWR
+Wire Wire Line
+	6250 750  6650 750 
+$Comp
+L power:GND #PWR?
+U 1 1 5DBFCFDF
+P 6250 2850
+F 0 "#PWR?" H 6250 2600 50  0001 C CNN
+F 1 "GND" H 6255 2677 50  0000 C CNN
+F 2 "" H 6250 2850 50  0001 C CNN
+F 3 "" H 6250 2850 50  0001 C CNN
+	1    6250 2850
+	1    0    0    -1  
+$EndComp
+Text Label 6750 1550 0    50   ~ 0
+Anti-Target_LED
+Text Label 6750 1050 0    50   ~ 0
+StabilityAssist_LED
+Text Label 6750 1150 0    50   ~ 0
+Maneuver_LED
+Text Label 6750 1450 0    50   ~ 0
+Target_LED
+Text Label 6750 1750 0    50   ~ 0
+Anti-Radial_LED
+Text Label 6750 1650 0    50   ~ 0
+Radial_LED
+Text Label 6750 1950 0    50   ~ 0
+Anti-Normal_LED
+Text Label 6750 1850 0    50   ~ 0
+Normal_LED
+Text Label 6750 1350 0    50   ~ 0
+RetroGrade_LED
+Text Label 6750 1250 0    50   ~ 0
+ProGrade_LED
+Text Label 5750 1650 2    50   ~ 0
+SAS_P8
+Text Label 5750 1750 2    50   ~ 0
+SAS_P4
+Text Label 5750 1850 2    50   ~ 0
+SAS_P2
+Text Label 4600 650  2    50   ~ 0
+SAS_P8
+Text Label 4600 750  2    50   ~ 0
+SAS_P4
+Text Label 4600 850  2    50   ~ 0
+SAS_P2
+Text Label 4600 950  2    50   ~ 0
+SAS_P1
+$Comp
+L Switch:SW_Coded_SH-7010 SW2
+U 1 1 5DAF1327
+P 5000 850
+F 0 "SW2" H 5057 1317 50  0000 C CNN
+F 1 "SW_Coded_SH-7010" H 5057 1226 50  0000 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x05_P2.00mm_Vertical" H 4700 400 50  0001 L CNN
+F 3 "https://www.nidec-copal-electronics.com/e/catalog/switch/sh-7000.pdf" H 5000 850 50  0001 C CNN
+	1    5000 850 
+	-1   0    0    1   
+$EndComp
+Connection ~ 3750 1050
+Wire Wire Line
+	3750 1050 4600 1050
+$Comp
+L Switch:SW_SPST SW6
+U 1 1 5DB5674E
+P 3350 1050
+F 0 "SW6" V 3304 1148 50  0000 L CNN
+F 1 "SW_SPST" V 3395 1148 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 3350 1050 50  0001 C CNN
+F 3 "~" H 3350 1050 50  0001 C CNN
+	1    3350 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 5DC4EA33
+P 900 1000
+F 0 "SW?" V 854 1098 50  0000 L CNN
+F 1 "SW_SPST" V 945 1098 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 900 1000 50  0001 C CNN
+F 3 "~" H 900 1000 50  0001 C CNN
+	1    900  1000
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
